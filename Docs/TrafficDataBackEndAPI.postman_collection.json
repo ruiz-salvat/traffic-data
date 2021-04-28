@@ -1,0 +1,499 @@
+{
+	"info": {
+		"_postman_id": "3e4f4e87-52ad-4ffd-ac8d-580723fc4a88",
+		"name": "TrafficDataBackEndAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MeasurementPoint",
+			"item": [
+				{
+					"name": "GetMeasurementPoints",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44362/api/MeasurementPoint",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"MeasurementPoint"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMeasurementPoint",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44362/api/MeasurementPoint/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"MeasurementPoint",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddMeasurementPoint",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reference\": \"TestTheController\",\r\n    \"latitude\": 52.0,\r\n    \"longitude\": 5.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44362/api/MeasurementPoint",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"MeasurementPoint"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateMeasurementPoint",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1754,\r\n    \"reference\": \"TestTheController (Update)\",\r\n    \"latitude\": 52,\r\n    \"longitude\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44362/api/MeasurementPoint",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"MeasurementPoint"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMeasurementPoint",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44362/api/MeasurementPoint/1754",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"MeasurementPoint",
+								"1754"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TrafficData",
+			"item": [
+				{
+					"name": "GetTrafficData",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44362/api/TrafficData",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"TrafficData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTrafficDataByMeasurementPointId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44362/api/TrafficData/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"TrafficData",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTrafficDataTimeInterval",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44362/api/TrafficData/2019-11-30 00:06:00/2019-12-02 00:06:00",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"TrafficData",
+								"2019-11-30 00:06:00",
+								"2019-12-02 00:06:00"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTrafficDataTimeIntervalByMeasurementPointId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44362/api/TrafficData/1/2019-11-30 00:06:00/2019-12-02 00:06:00",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"TrafficData",
+								"1",
+								"2019-11-30 00:06:00",
+								"2019-12-02 00:06:00"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddTrafficDataRow",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dateTime\": \"2019-12-01T22:00:00\",\r\n    \"flow\": 180,\r\n    \"speed\": 90,\r\n    \"measurementPointId\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44362/api/TrafficData",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"TrafficData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddTrafficData",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"dateTime\": \"2019-12-01T10:00:00\",\r\n        \"flow\": 180,\r\n        \"speed\": 90,\r\n        \"measurementPointId\": 4\r\n    },\r\n    {\r\n        \"dateTime\": \"2019-12-01T11:00:00\",\r\n        \"flow\": 180,\r\n        \"speed\": 90,\r\n        \"measurementPointId\": 4\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44362/api/TrafficData",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"TrafficData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateTrafficDataRow",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dateTime\": \"2019-12-01T10:00:00\",\r\n    \"flow\": 888,\r\n    \"speed\": 888,\r\n    \"measurementPointId\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44362/api/TrafficData",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"TrafficData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateTrafficData",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n{\n    \"dateTime\": \"2019-12-01T21:00:00\",\n    \"flow\": 777,\n    \"speed\": 777,\n    \"measurementPointId\": 1\n},\n{\n    \"dateTime\": \"2019-12-01T22:00:00\",\n    \"flow\": 666,\n    \"speed\": 666,\n    \"measurementPointId\": 1\n}\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44362/api/TrafficData",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"TrafficData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteTrafficDataTimeInterval",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://127.0.0.1:5001/api/TrafficData/2019-11-30 00:06:00/2019-12-02 00:06:00",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"TrafficData",
+								"2019-11-30 00:06:00",
+								"2019-12-02 00:06:00"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteTrafficDataTimeIntervalByMeasurementPointId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://127.0.0.1:5001/api/TrafficData/4/2019-11-30 00:06:00/2019-12-02 00:06:00",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"TrafficData",
+								"4",
+								"2019-11-30 00:06:00",
+								"2019-12-02 00:06:00"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "DataExtraction",
+			"item": [
+				{
+					"name": "GetState",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44362/api/DataExtraction",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"DataExtraction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StartThread",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Tag\":\"StartThread\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44362/api/DataExtraction",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"DataExtraction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StopThread",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Tag\":\"StopThread\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44362/api/DataExtraction",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"DataExtraction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RetrieveMeasurementPoints",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44362/api/DataExtraction",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44362",
+							"path": [
+								"api",
+								"DataExtraction"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

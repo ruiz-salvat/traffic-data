@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficDataBackEndAPI.BackEndApi", "TrafficDataBackEndAPI.BackEndApi\TrafficDataBackEndAPI.BackEndApi.csproj", "{8EEAD43F-623D-41AB-AAA6-D3D20C6B2D79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficDataBackEndAPI.BackEndApi.Tests", "TrafficDataBackEndAPI.BackEndApi.Tests\TrafficDataBackEndAPI.BackEndApi.Tests.csproj", "{E60E230F-6B59-4394-9136-F4E55AD3CCAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EEAD43F-623D-41AB-AAA6-D3D20C6B2D79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EEAD43F-623D-41AB-AAA6-D3D20C6B2D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EEAD43F-623D-41AB-AAA6-D3D20C6B2D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EEAD43F-623D-41AB-AAA6-D3D20C6B2D79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E60E230F-6B59-4394-9136-F4E55AD3CCAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E60E230F-6B59-4394-9136-F4E55AD3CCAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E60E230F-6B59-4394-9136-F4E55AD3CCAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E60E230F-6B59-4394-9136-F4E55AD3CCAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C568A0E-9DD1-474E-8BFC-C29714D347B9}
+	EndGlobalSection
+EndGlobal
